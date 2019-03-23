@@ -72,8 +72,26 @@ File: Layout CSS
 #testimonials figure figcaption br{display:none;}
 #testimonials figure figcaption em{font-size:.8rem;}
 #testimonials blockquote{display:block; position:relative; width:100%; margin:0 0 25px 0; padding:30px; z-index:1;}
-#testimonials blockquote::before{display:block; position:absolute; bottom:-25px; left:50%; width:50px; height:50px; line-height:50px; margin:0 0 0 -25px; font-family:"FontAwesome"; font-size:22px; content:"\f10d"; text-align:center; border-radius:50%;}
+#testimonials blockquote::before{display:block; position:absolute; bottom:-25px; left:50%; width:50px; height:50px; line-height:50px; margin:0 0 0 -25px; font-family:"FontAwesome"; font-size:22px; content:"\f097"; text-align:center; border-radius:50%;}
 #testimonials blockquote::after{display:none;}
+
+#loStudio{}
+#loStudio > li:last-child, #loStudio > li:last-child blockquote{margin-bottom:0;}/* Used when elements stack in smaller viewports */
+#loStudio blockquote{display:block; position:relative; width:100%; margin:0 0 25px 0; padding:30px; z-index:1;}
+#loStudio blockquote::before{display:block; position:absolute; bottom:-25px; left:50%; width:50px; height:50px; line-height:50px; margin:0 0 0 -25px; font-family:"FontAwesome"; font-size:22px; content:"\f097"; text-align:center; border-radius:50%;}
+#loStudio blockquote::after{display:none;}
+
+#map{}
+#map > li:last-child, #map > li:last-child blockquote{margin-bottom:0;}/* Used when elements stack in smaller viewports */
+#map blockquote{display:block; position:relative; width:100%; margin:0 0 25px 0; padding:30px; z-index:1;}
+#map blockquote::before{display:block; position:absolute; bottom:-25px; left:50%; width:50px; height:50px; line-height:50px; margin:0 0 0 -25px; font-family:"FontAwesome"; font-size:22px; content:"\f097"; text-align:center; border-radius:50%;}
+#map blockquote::after{display:none;}
+
+#partners{}
+#partners > li:last-child, #partners > li:last-child blockquote{margin-bottom:0;}/* Used when elements stack in smaller viewports */
+#partners blockquote{display:block; position:relative; width:100%; margin:0 0 25px 0; padding:30px; z-index:1;}
+#partners blockquote::before{display:block; position:absolute; bottom:-25px; left:50%; width:50px; height:50px; line-height:50px; margin:0 0 0 -25px; font-family:"FontAwesome"; font-size:22px; content:"\f097"; text-align:center; border-radius:50%;}
+#partners blockquote::after{display:none;}
 
 .latest{}
 .latest article{}
@@ -288,9 +306,8 @@ hr, .borderedbox{border-color:#D7D7D7;}
 label span{color:#FF0000; background-color:inherit;}
 input:focus, textarea:focus, *:required:focus{border-color:#6AAEBF;}
 .overlay{color:#FFFFFF; background-color:inherit;}
-.overlay::after{color:inherit; background-color:rgba(0,0,0,.55);}
+.overlay::after{color:inherit; background-color:rgba(0,0,0,.40);}
 .coloured.overlay::after{background-color:rgba(49,101,115,.55);/* #316573 */}
-
 .btn, .btn.inverse:hover, a .icon.fa, a.inverse:hover .icon.fa{color:#FFFFFF; background-color:#6AAEBF; border-color:#6AAEBF;}
 .btn:hover, .btn.inverse, a:hover .icon.fa, a.inverse .icon.fa{color:inherit; background-color:transparent; border-color:inherit;}
 
@@ -322,6 +339,15 @@ input:focus, textarea:focus, *:required:focus{border-color:#6AAEBF;}
 /* Testimonial */
 #testimonials blockquote{color:inherit; background-color:#F2F2F2;}
 #testimonials blockquote::before{color:#FFFFFF; background-color:#D7D7D7;}
+
+#loStudio blockquote{color:inherit; background-color:#F2F2F2;}
+#loStudio blockquote::before{color:#FFFFFF; background-color:#D7D7D7;}
+
+#map blockquote{color:inherit; background-color:#F2F2F2;}
+#map blockquote::before{color:#FFFFFF; background-color:#D7D7D7;}
+
+#partners blockquote{color:inherit; background-color:#F2F2F2;}
+#partners blockquote::before{color:#FFFFFF; background-color:#D7D7D7;}
 
 
 /* Contact Details */
@@ -390,14 +416,18 @@ table a, #comments a{background-color:inherit;}
 @media screen and (max-width:900px){
 	.hoc{max-width:90%;}
 
-	#header{padding:30px 0;}
+	#header{padding:20px 0;}
 	#header #logo{margin-top:3px;}
 
-	#mainav{}
-	#mainav ul{display:none;}
-	#mainav form{display:block;}
+	#mainav{
+		font-size: 70%;
+	}
+	/* #mainav ul{display:none;}
+	#mainav form{display:block;} */
 
 	#breadcrumb{}
+
+
 
 	.container{}
 	#comments input[type="reset"]{margin-top:10px;}
@@ -407,6 +437,8 @@ table a, #comments a{background-color:inherit;}
 
 	#copyright{}
 	#copyright p:first-of-type{margin-bottom:10px;}
+
+
 }
 
 
@@ -423,6 +455,33 @@ table a, #comments a{background-color:inherit;}
 	.cta > :first-child{margin-top:0;}
 
 	#footer{padding-bottom:50px;}/* Not neccessary - just looks better */
+
+	#googleMaps{
+		visibility: hidden;
+		clear: both;
+		float: left;
+		margin: 10px auto 5px 20px;
+		width: 28%;
+		display: none;
+	}
+
+	#Orario{
+		min-width: 110%;
+	}
+
+	#subTitle {
+		visibility: hidden;
+		clear: both;
+		float: left;
+		margin: 10px auto 5px 20px;
+		width: 28%;
+		display: none;
+	}
+
+	#laNostraStrum{
+		overflow: hidden;
+		white-space: nowrap;
+	}
 }
 
 
@@ -439,8 +498,130 @@ table a, #comments a{background-color:inherit;}
 	.font-x3{font-size:1.6rem;}
 
 	#pageintro article, #pageintro p:first-of-type{max-width:none; width:100%;}
-	#pageintro .heading{font-size:1.6rem;}
+	#pageintro .heading{font-size:1.6rem; font-family: FontAwesome}
 
 	.hoc.split{max-width:none; width:100%;}
 	.split section{float:none; width:100%; padding:10% 5%;}
 }
+
+@media screen and (max-width:600px){
+
+	#gallery  {
+		visibility: hidden;
+		clear: both;
+		float: left;
+		margin: 10px auto 5px 20px;
+		width: 28%;
+		display: none;
+	}
+}
+
+@media screen and (min-width:600px){
+
+	#mobileGallery  {
+		visibility: hidden;
+		clear: both;
+		float: left;
+		margin: 10px auto 5px 20px;
+		width: 28%;
+		display: none;
+	}
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+
+
+
+
+#portfolio {
+	margin: 1rem 0;
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
+	-webkit-column-gap: 1rem;
+	-moz-column-gap: 1rem;
+	column-gap: 1rem;
+	-webkit-column-width: 33.33333333333333%;
+	-moz-column-width: 33.33333333333333%;
+	column-width: 33.33333333333333%;
+}
+
+#gallery .tile {
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition: all 350ms ease;
+	transition: all 350ms ease;
+
+}
+
+#gallery.tile:hover {
+
+}
+
+#gallery .scale-anm {
+	transform: scale(1);
+}
+
+
+#gallery p{
+	padding:10px;
+	border-bottom: 1px #ccc dotted;
+	text-decoration: none;
+	font-family: lato;
+	text-transform:uppercase;
+	font-size: 12px;
+	color: #333;
+	display:block;
+	float:left;
+}
+
+#gallery p:hover {
+	cursor:pointer;
+	background: #333;
+	color:#eee; }
+
+#gallery .tile img {
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+	margin-bottom: 1rem;
+
+}
+
+#gallery .btn {
+	font-family: Lato;
+	font-size: 1rem;
+	font-weight: normal;
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-block;
+	line-height: normal;
+	padding: .5rem 1rem;
+	margin: 0;
+	height: auto;
+	border: 1px solid;
+	vertical-align: middle;
+	-webkit-appearance: none;
+	color: #555;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+#gallery .btn:hover {
+	text-decoration: none;
+}
+
+#gallery .btn:focus {
+	outline: none;
+	border-color: var(--darken-2);
+	box-shadow: 0 0 0 3px var(--darken-3);
+}
+
+#gallery ::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
